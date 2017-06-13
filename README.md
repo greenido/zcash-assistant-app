@@ -5,9 +5,9 @@ For example:
 * Price.
 * Market cap.
 * Volume in the last 24h.
+You can test it live: https://ido-green.appspot.com/bots.html
 
-
-![zcash logo](https://lh5.googleusercontent.com/YuCzUMnzjLaj9gJMdOmpVPwEe01x1_z7vHul47d_x57P-6uL_kWQsLczmL5Aj_j_wgVRtZ0qa0lQeaAzde58M19pKXK81cIMyGOZ3HMZa7eNSlC3X3OZ=w1175)
+![zcash logo](https://greenido.files.wordpress.com/2017/06/zcash-1920x1080.jpg)
 
 ## Setup Instructions
 
