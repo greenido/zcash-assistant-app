@@ -29,7 +29,7 @@ function processMessage($update) {
       $marketCap = substr($rawHtml, $inx1, $inx2 - $inx1);
       $tmpStr = "Right now the zcash market cap is {$marketCap}. What else do you wish to know?";
         sendMessage(array(
-            "source" => "zcash-price-sample",
+            "source" => "zcash-marketcap-sample",
             "speech" => $tmpStr,
             "displayText" => $tmpStr
         ));
@@ -44,7 +44,7 @@ function processMessage($update) {
       $vol = substr($rawHtml, $inx1, $inx2 - $inx1);
       $tmpStr = "The zcash volume in the last 24 hours is {$vol}. What else do you wish to know?";
         sendMessage(array(
-            "source" => "zcash-price-sample",
+            "source" => "zcash-volume-sample",
             "speech" => $tmpStr,
             "displayText" => $tmpStr
         ));
