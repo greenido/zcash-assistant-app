@@ -9,8 +9,9 @@
 // Entry point to all the different request that this webhook will get
 //
 function processMessage($update) {
+    $endPointURL = 'https://coinmarketcap.com/currencies/zcash/';
     if( $update["result"]["action"] === "price") {
-      $rawHtml = file_get_contents('https://coinmarketcap.com/currencies/zcash/');
+      $rawHtml = file_get_contents($endPointURL);
       $inx1 = strpos($rawHtml, "quote_price") + 13;
       $inx2 = strpos($rawHtml, "<", $inx1);
       $price = substr($rawHtml, $inx1, $inx2 - $inx1);
@@ -22,8 +23,7 @@ function processMessage($update) {
         ));
     }
     elseif ($update["result"]["action"] === "marketcap" ) {
-      $rawHtml = file_get_contents('https://coinmarketcap.com/currencies/zcash/');
-                              //123456789012345678901234567890  
+      $rawHtml = file_get_contents($endPointURL);
       $inx1 = strpos($rawHtml, "coin-summary-item-detail") + 26;
       $inx2 = strpos($rawHtml, "<", $inx1);
       $marketCap = substr($rawHtml, $inx1, $inx2 - $inx1);
@@ -35,7 +35,7 @@ function processMessage($update) {
         ));
     }
     elseif ($update["result"]["action"] === "volume24h" ) {
-      $rawHtml = file_get_contents('https://coinmarketcap.com/currencies/zcash/');
+      $rawHtml = file_get_contents($endPointURL);
                               //123456789012345678901234567890  
       $inx1 = strpos($rawHtml, "coin-summary-item-detail") + 26;
       // let's get the second ancor for the vol.
